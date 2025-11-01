@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Medidor } from "./medidor/medidor";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Medidor],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('sistema-calculo-de-distancias');
+  protected readonly title = signal('medidor-distancia');
 }
