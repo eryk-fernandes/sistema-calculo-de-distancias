@@ -1,0 +1,51 @@
+<div class="container">
+
+  <h1 class="titulo">Medidor de Distância Rápido</h1>
+
+  <div class="conteudo">
+
+    <!-- Caixa do mapa -->
+    <div class="map-box">
+      <!-- Aqui no futuro entrará o mapa -->
+      <div class="map-placeholder">
+        <p>MAPA AQUI</p>
+      </div>
+    </div>
+
+    <!-- Painel lateral -->
+    <div class="painel">
+
+      <h3>CONTROLES E RESULTADOS</h3>
+
+      <section>
+        <h4>1. Definir Pontos</h4>
+        <button class="btn">+ Adicionar Ponto A (OK)</button>
+        <button class="btn">+ Adicionar Ponto B (OK)</button>
+        <button class="btn btn-clear">Limpar Pontos</button>
+      </section>
+
+      <section>
+        <h4>2. Pontos Selecionados</h4>
+        <div class="campo">
+          <label>Ponto A:</label>
+          <input type="text" placeholder="[48.8584, 2.2945]" disabled>
+        </div>
+        <div class="campo">
+          <label>Ponto B:</label>
+          <input type="text" placeholder="[40.6892, -74.0445]" disabled>
+        </div>
+      </section>
+
+      <section>
+        <h4>3. Distância Calculada</h4>
+        <p class="resultado">5837.2 km</p>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Medir distância por rota (carro/a pé)
+        </label>
+      </section>
+
+    </div>
+  </div>
+</div>
