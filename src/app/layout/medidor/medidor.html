@@ -1,34 +1,20 @@
 <section class="painel">
 
-  <h3>CONTROLES E RESULTADOS</h3>
-
-  <section class="definir-pontos">
-    <h4>1. Definir Pontos</h4>
-    <button class="btn">+ Adicionar Ponto A (OK)</button>
-    <button class="btn">+ Adicionar Ponto B (OK)</button>
-    <button class="btn btn-clear" (click)="limparPontos()">Limpar Pontos</button>
-  </section>
+  <h3>Painel</h3>
 
   <section class="pontos-selecionados">
-    <h4>2. Pontos Selecionados</h4>
+    <h4>Pontos Selecionados</h4>
     <div class="campo">
-      <label>Ponto A:</label>
-      <input type="text" placeholder="[48.8584, 2.2945]">
+      <label>Ponto A: {{pontoA}}</label>
     </div>
     <div class="campo">
-      <label>Ponto B:</label>
-      <input type="text" placeholder="[40.6892, -74.0445]">
+      <label>Ponto B: {{pontoB}}</label>
     </div>
   </section>
 
   <section class="distancia-calculada">
-    <h4>3. Distância Calculada</h4>
-    <p class="resultado">5837.2 km</p>
-
-    <label class="checkbox">
-      <input type="checkbox">
-      Medir distância por rota (carro/a pé)
-    </label>
+    <h4>Distância Calculada</h4>
+    <p class="resultado">{{resultado}}</p>
   </section>
 
 </section>
