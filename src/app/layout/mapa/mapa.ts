@@ -47,9 +47,11 @@ export class Mapa {
 
       if (this.contador === 0) {
         this.pontoA.set(marcador);
+        console.log(this.pontoA()?.getLatLng());
         this.contador++;
       } else if (this.contador === 1) {
         this.pontoB.set(marcador);
+        console.log(this.pontoB()?.getLatLng());
         this.contador++;
       } else {
         map.removeLayer(this.pontoA()!);
