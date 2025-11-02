@@ -1,0 +1,53 @@
+app-layout {
+  height: 100%;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 20px repeat(8, 1fr) 20px;
+  grid-template-rows: 20px repeat(8, 1fr) 20px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.titulo {
+  grid-area: 2 / 4 / 3 / 8;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+main {
+  grid-area: 3 / 2 / 10 / 10;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  height: 100%;
+  min-height: 0;
+}
+
+app-mapa {
+  grid-area: 1 / 1 / 9 / 6;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+app-medidor {
+  grid-area: 1 / 6 / 9 / 9;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+

@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Layout } from "./layout/layout";
+import { Layout } from './layout/layout';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,4 @@ import { Layout } from "./layout/layout";
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('medidor-distancia');
 }
