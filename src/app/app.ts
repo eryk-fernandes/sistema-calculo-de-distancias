@@ -1,11 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Medidor } from "./medidor/medidor";
-import { Mapa } from "./mapa/mapa";
+import { Layout } from "./layout/layout";
 
 @Component({
   selector: 'app-root',
-  imports: [Medidor, Mapa],
+  imports: [Layout],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
