@@ -6,7 +6,12 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SharedService {
 
-  public limpar = signal(false);
+  private limpar = signal(false);
+  limparPonto = this.limpar.asReadonly();
+
+  setLimpar(v: boolean) {
+    this.limpar.set(v);
+  }
 
   private pontoA = new BehaviorSubject<any>(null);
   pontoAData$ = this.pontoA.asObservable();
@@ -15,11 +20,11 @@ export class SharedService {
   pontoBData$ = this.pontoB.asObservable();
 
   updatePontoA(pontoA: any) {
-    this.pontoA.next(pontoA); 
+    this.pontoA.next(pontoA);
   }
 
   updatePontoB(pontoB: any) {
-    this.pontoB.next(pontoB); 
+    this.pontoB.next(pontoB);
   }
 
   limparPontos(): void {
@@ -29,5 +34,4 @@ export class SharedService {
   reiniciarPontos(): void {
     this.limpar.set(false);
   }
-  
 }
