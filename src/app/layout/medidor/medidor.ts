@@ -23,13 +23,19 @@ export class Medidor {
     });
   }
 
+  calcularDistancias(): void{
+    let pontoACoord = `${this.pontoA.lat},${this.pontoA.lng}`;
+    let pontoBCoord = `${this.pontoB.lat},${this.pontoB.lng}`;
+    // this.apiService.calcularDistancias(pontoACoord, pontoBCoord);
+  }
+
   limparPontos(): void {
     this.sharedService.limparPontos();
   }
 
   resetarTudo() {
     this.sharedService.setLimpar(true);
-    this.pontoA = ''
-    this.pontoB = ''
+    this.pontoA = '';
+    this.pontoB = '';
   }
 }
