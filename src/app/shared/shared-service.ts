@@ -1,10 +1,13 @@
 import { Injectable, signal } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { APIService } from '../api/apiservice';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SharedService {
+
+  constructor(private apiService: APIService) {}
 
   private limpar = signal(false);
   limparPonto = this.limpar.asReadonly();
@@ -18,7 +21,7 @@ export class SharedService {
 
   private pontoB = new BehaviorSubject<any>(null);
   pontoBData$ = this.pontoB.asObservable();
-
+  
   updatePontoA(pontoA: any) {
     this.pontoA.next(pontoA);
   }
