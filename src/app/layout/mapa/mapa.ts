@@ -16,7 +16,7 @@ export class Mapa {
 
   constructor(private sharedService: SharedService) {
     effect(() => {
-      if (this.sharedService.limpar()) {
+      if (this.sharedService.limparPonto()) {
         if (this.pontoA()) this.mapa()?.removeLayer(this.pontoA()!);
         if (this.pontoB()) this.mapa()?.removeLayer(this.pontoB()!);
         this.pontoA.set(null);
@@ -39,23 +39,42 @@ export class Mapa {
     }).addTo(this.mapa() as L.Map);
   }
 
+  enviarPontoA(marcador: any): void {
+    return this.sharedService.updatePontoA(marcador.getLatLng());
+  }
+
+  enviarPontoB(marcado: any): void {
+    return this.sharedService.updatePontoB(marcado.getLatLng());
+  }
+
   private adicionarPontos(): void {
     const map = this.mapa()!;
+
     map.on('click', (e: L.LeafletMouseEvent) => {
+      if (this.contador >= 2) return;
+
       const { lat, lng } = e.latlng;
       const marcador = L.marker([lat, lng]).addTo(map);
 
       if (this.contador === 0) {
         this.pontoA.set(marcador);
+        this.enviarPontoA(marcador);
+        console.log(this.pontoA()?.getLatLng());
         this.contador++;
       } else if (this.contador === 1) {
         this.pontoB.set(marcador);
+        this.enviarPontoB(marcador);
+        console.log(this.pontoB()?.getLatLng());
         this.contador++;
       } else {
         map.removeLayer(this.pontoA()!);
         map.removeLayer(this.pontoB()!);
+
         this.pontoA.set(marcador);
+        this.enviarPontoA(marcador);
+
         this.pontoB.set(null);
+
         this.contador = 1;
       }
     });
