@@ -1,6 +1,7 @@
 .painel {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
   box-sizing: border-box;
   padding: 15px;
@@ -11,12 +12,16 @@
   flex-shrink: 1;
 }
 
-h3 {
-  margin-top: 0;
+.texto {
+  margin-left: 15%;
+}
+
+.titulo {
+  margin: auto;
 }
 
 .btn {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   background: #4caf50;
   border: none;
@@ -24,21 +29,15 @@ h3 {
   margin-bottom: 8px;
   border-radius: 6px;
   cursor: pointer;
+  align-self: center;
 }
 
-.btn-clear {
-  background: #bbb;
+.limpar {
+  background: #d81717;
 }
 
 .campo {
   margin-bottom: 10px;
-}
-
-.campo input {
-  width: 80%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
 .resultado {
@@ -47,9 +46,6 @@ h3 {
   color: #333;
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
+.msg {
+  color: #d81717;
 }

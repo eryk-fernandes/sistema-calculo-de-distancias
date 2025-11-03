@@ -1,24 +1,29 @@
 <section class="painel">
-
-  <h3>Painel</h3>
-
-  <section class="pontos-selecionados">
+  
+  <section class="texto">
     <h4>Pontos Selecionados</h4>
     <div class="campo">
-      <label>Ponto A: {{pontoA}}</label>
+      <p><span class="pin">📍</span>Ponto A: {{pontoA}}</p>
     </div>
     <div class="campo">
-      <label>Ponto B: {{pontoB}}</label>
+      <p><span class="pin">📍</span>Ponto B: {{pontoB}}</p>
     </div>
   </section>
-  <button class="reset" (click)="resetarTudo()">Reset</button>
-
-
-  <section class="distancia-calculada">
-    <h4>Distância Calculada</h4>
-    <p class="resultado">{{resultado}}</p>
+  
+  <section class="texto">
+  <h4>Distância Calculada</h4>
+  <p class="resultado">{{resultado}}</p>
   </section>
 
-  <button class="calcularDistancias" (click)="calcularDistancias()"> Calcular distâncias </button>
+  @if(mensagem != "") {
+    <section class="texto msg">
+      <p>{{mensagem}}</p>
+    </section>
+  }
+
+  <button class="btn limpar" (click)="resetarTudo()">Limpar</button>
+  
+  <button class="btn" (click)="calcularDistancias()">Calcular distâncias</button>
+  
 
 </section>
