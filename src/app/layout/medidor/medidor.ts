@@ -9,8 +9,8 @@ import { APIService } from '../../api/apiservice';
   styleUrl: './medidor.css',
 })
 export class Medidor {
-  pontoA: any = 'Indefinido';
-  pontoB: any = 'Indefinido';
+  pontoA: any = '0,0';
+  pontoB: any = '0,0';
   resultado: any = '0 km';
 
   constructor(private sharedService: SharedService, private apiService: APIService) {}
@@ -25,7 +25,6 @@ export class Medidor {
   }
 
   calcularDistancias(): void {
-    this.resultado = 'Calculando...';
     this.resultado = this.calcularDistancia(this.pontoA, this.pontoB);
   }
 
@@ -42,8 +41,8 @@ export class Medidor {
 
   resetarTudo() {
     this.sharedService.setLimpar(true);
-    this.pontoA = '';
-    this.pontoB = '';
+    this.pontoA = '0,0';
+    this.pontoB = '0,0';
     this.resultado = '0 km';
   }
 }
