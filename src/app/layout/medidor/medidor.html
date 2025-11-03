@@ -1,0 +1,24 @@
+<section class="painel">
+
+  <h3>Painel</h3>
+
+  <section class="pontos-selecionados">
+    <h4>Pontos Selecionados</h4>
+    <div class="campo">
+      <label>Ponto A: {{pontoA}}</label>
+    </div>
+    <div class="campo">
+      <label>Ponto B: {{pontoB}}</label>
+    </div>
+  </section>
+  <button class="reset" (click)="resetarTudo()">Reset</button>
+
+
+  <section class="distancia-calculada">
+    <h4>Distância Calculada</h4>
+    <p class="resultado">{{resultado}}</p>
+  </section>
+
+  <button class="calcularDistancias" (click)="calcularDistancias()"> Calcular distâncias </button>
+
+</section>
