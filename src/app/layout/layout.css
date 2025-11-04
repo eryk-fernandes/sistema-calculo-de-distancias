@@ -53,8 +53,8 @@ app-mapa {
   width: 100%;
   background: #ffffff;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra */
-  border-radius: 8px; /* opcional */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
   overflow: hidden;
 }
 

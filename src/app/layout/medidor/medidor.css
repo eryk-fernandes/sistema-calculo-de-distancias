@@ -37,24 +37,41 @@
   margin-right: 10px;
 }
 
+.pontos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid black; */
+  padding: 20px 10px 0 10px;
+
+}
+
 .pontos-titulo {
   font-size: 14px;
   font-weight: bold;
   color: #555;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 .ponto {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  justify-content: flex-start;
+  gap: 8px;
   font-size: 15px;
   color: #333;
+  padding: 6px 10px;
+  /* border: 1px solid #000; */
 }
 
-.ponto .pin {
-  font-size: 16px;
-  margin-right: 8px;
+.ponto .pin img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  transform: translateY(-8px); /* nudges image upward */
 }
 
 .ponto-a .pin {
@@ -65,13 +82,17 @@
   color: #dc3545;
 }
 
+/* .ponto p {
+  border: 1px solid black;
+} */
+
 .map-placeholder {
-  width:30%;
+  width: 30%;
   text-align: center;
   margin: 20px 0;
   padding: 0;
   background-color: #f7f7f7;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -83,7 +104,6 @@
   display: block;
   border-radius: inherit;
 }
-
 
 .distancia {
   padding-top: 15px;
@@ -109,19 +129,22 @@
 
 .acoes {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  /* justify-content: space-between; */
+  gap: 5px;
   margin-top: 25px;
 }
 
 .btn {
-  padding: 12px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-  flex-grow: 1;
+  flex: 1;                /* os dois ocupam o mesmo espaço */
   text-align: center;
-  transition: background-color 0.3s, border-color 0.3s;
+  padding: 12px 0;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+  min-width: 0;           /* evita que um botão force o outro a encolher */
 }
 
 .btn-primary {
