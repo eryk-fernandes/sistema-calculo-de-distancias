@@ -1,29 +1,57 @@
-<section class="painel">
-  
-  <section class="texto">
+<div class="painel">
+  <div class="painel-header">
+    <span class="icon">🗺️</span>
+    Cálculo de Distância
+  </div>
+
+  <section class="pontos">
+    <div class="pontos-titulo">Pontos Selecionados</div>
+    <div class="ponto ponto-a">
+      <span class="pin">📍</span>
+      <p>Ponto A: {{ pontoA }}</p>
+    </div>
+    <div class="ponto ponto-b">
+      <span class="pin">📍</span>
+      <p>Ponto B: {{ pontoB }}</p>
+    </div>
+
+    <div class="map-placeholder"><img src="map-placeholder.png" alt="Mapa" /></div>
+  </section>
+
+  <!-- <section class="texto">
     <h4>Pontos Selecionados</h4>
     <div class="campo">
-      <p><span class="pin">📍</span>Ponto A: {{pontoA}}</p>
+      <p><span class="pin">📍</span>Ponto A: {{ pontoA }}</p>
     </div>
     <div class="campo">
-      <p><span class="pin">📍</span>Ponto B: {{pontoB}}</p>
+      <p><span class="pin">📍</span>Ponto B: {{ pontoB }}</p>
+    </div>
+  </section> -->
+
+  <section class="distancia">
+    <div class="distancia-titulo">Distância Calculada</div>
+    <div class="distancia-valor">
+      {{ resultado | number : '1.1-1' }} <span class="distancia-unidade">km</span>
     </div>
   </section>
-  
-  <section class="texto">
-  <h4>Distância Calculada</h4>
-  <p class="resultado">{{resultado}}</p>
+
+  <!-- <section class="texto">
+    <h4>Distância Calculada</h4>
+    <p class="resultado">{{ resultado }}</p>
+  </section> -->
+
+  <!-- @if(mensagem != "") {
+  <section class="texto msg">
+    <p>{{ mensagem }}</p>
   </section>
+  } -->
 
-  @if(mensagem != "") {
-    <section class="texto msg">
-      <p>{{mensagem}}</p>
-    </section>
-  }
+  <div class="acoes">
+    <button class="btn btn-secondary" (click)="resetarTudo()">Limpar</button>
+    <button class="btn btn-primary" (click)="calcularDistancias()">Calcular Distâncias</button>
+  </div>
 
-  <button class="btn limpar" (click)="resetarTudo()">Limpar</button>
-  
-  <button class="btn" (click)="calcularDistancias()">Calcular distâncias</button>
-  
+  <!-- <button class="btn limpar" (click)="resetarTudo()">Limpar</button>
 
-</section>
+  <button class="btn" (click)="calcularDistancias()">Calcular distâncias</button> -->
+</div>
