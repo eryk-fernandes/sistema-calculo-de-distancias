@@ -1,10 +1,11 @@
 import { SharedService } from './../../shared/shared-service';
 import { Component } from '@angular/core';
 import { APIService } from '../../api/apiservice';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-medidor',
-  imports: [],
+  imports: [DecimalPipe],
   templateUrl: './medidor.html',
   styleUrl: './medidor.css',
 })
@@ -38,7 +39,7 @@ export class Medidor {
 
   calcularDistancia(pontoACoord: any, pontoBCoord: any) {
     this.apiService.calcularDistancia(pontoACoord, pontoBCoord).subscribe({
-      next: (res) => (this.resultado = res.rows[0].elements[0].distance.text),
+      next: (res) => (this.resultado = (res.rows[0].elements[0].distance.value)/1000),
       error: (err) => console.error(err),
   })
 };
