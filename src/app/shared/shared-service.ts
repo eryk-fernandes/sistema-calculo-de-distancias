@@ -1,13 +1,11 @@
 import { Injectable, signal } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { APIService } from '../api/apiservice';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SharedService {
 
-  constructor(private apiService: APIService) {}
 
   private limpar = signal(false);
   limparPonto = this.limpar.asReadonly();
