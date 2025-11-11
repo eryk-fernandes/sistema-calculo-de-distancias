@@ -1,6 +1,5 @@
 app-layout {
   height: 100%;
-
 }
 
 .layout {
@@ -36,37 +35,43 @@ app-layout {
 
 main {
   grid-area: 3 / 2 / 10 / 10;
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 10px;
-  grid-row-gap: 0px;
+  grid-row-gap: 0px; */
+  display: flex;
+  justify-content: space-between;
   font-family: Arial, sans-serif;
   height: 100%;
   /* background-color: #f0f0f0; */
   margin: 0;
+  /* border: 1px solid black; */
+  gap: 50px;
 }
 
 app-mapa {
-  grid-area: 1 / 1 / 9 / 6;
+  /* grid-area: 1 / 1 / 9 / 6; */
   height: 100%;
   width: 100%;
   background: #ffffff;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra */
-  border-radius: 8px; /* opcional */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
   overflow: hidden;
+  /* border: 1px solid black; */
 }
 
 app-medidor {
-  grid-area: 1 / 6 / 9 / 9;
+  /* grid-area: 1 / 6 / 9 / 9; */
   /* height: 80%;
   width: 80%;
   background: #ffffff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
   border-radius: 8px;
-  margin-top: 10%;
-  margin-left: 10%;
+  display: flex;
+  /* margin-top: 10%;
+  margin-left: 10%; */
+  /* border: 1px solid black; */
 }
-
