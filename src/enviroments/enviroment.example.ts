@@ -4,3 +4,4 @@ export const environment = {
 };
 
 // Crie um arquivo enviroment.ts com sua chave de API para desenvolvimento
+// OBS: Não coloque sua chave da api nesse arquivo!
