@@ -3,7 +3,7 @@
 
 Sistema de cálculo de distâncias entre duas coordenadas feito em Angular 20 utilizando a API Distance Matrix.
 
-<img src="https://github.com/eryk-fernandes/sistema-calculo-de-distancias/blob/main/screenshot.jpeg" alt="" height="100">
+<img src="https://github.com/eryk-fernandes/sistema-calculo-de-distancias/blob/main/screenshot.jpeg" alt="" height="200">
 
 ## Stack utilizada
 
