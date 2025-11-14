@@ -1,59 +1,40 @@
-# SistemaCalculoDeDistancias
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+## Sistema de Cálculo de Distâncias
 
-## Development server
+Sistema de cálculo de distâncias entre duas coordenadas feito em Angular 20 utilizando a API Distance Matrix.
 
-To start a local development server, run:
+<img src="https://github.com/eryk-fernandes/sistema-calculo-de-distancias/blob/main/screenshot.jpeg" alt="" height="100">
 
-```bash
-ng serve
-```
+## Stack utilizada
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**Tecnologias:** Angular, Typescript
 
-## Code scaffolding
+**Biblioteca:** Leaftlet
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**API:** Distance Matrix API
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Rodando localmente
+
+Na pasta do projeto:
+
+- Instale as dependências
 
 ```bash
-ng generate --help
+  npm install
 ```
 
-## Building
+- Entre no site da <a href="https://distancematrix.ai/pt?utm_term=distance%20matrix%20api&utm_campaign=Distance+Matrix+API&utm_source=adwords&utm_medium=ppc&hsa_acc=7264558774&hsa_cam=11151808925&hsa_grp=110738086298&hsa_ad=466229134734&hsa_src=g&hsa_tgt=kwd-327115458930&hsa_kw=distance%20matrix%20api&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=11151808925&gclid=CjwKCAiAw9vIBhBBEiwAraSATq-MQQsyZ27rFOGYsvojruhpUIoPtGwL_rmbPX2BymS-cXBcuiBZABoCdUUQAvD_BwE">Distance Matrix API</a> para conseguir uma chave da API
 
-To build the project run:
+- Siga as instruções do arquivo src/enviroments/enviroment.example.ts
+
+- Rode o projeto
 
 ```bash
-ng build
+  npm run start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+    
+## Licença
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[MIT](https://choosealicense.com/licenses/mit/)
